@@ -12,12 +12,12 @@ let startTime = performance.now();
 let fps = 0;
 
 function calculateFPS() {
-	let t = performance.now();
-	let dt = t - startTime;
+  let t = performance.now();
+  let dt = t - startTime;
   fps = frames * 1000 / dt;
   frames = 0;
   startTime = t;
-	frames++;
+  frames++;
 
   context.beginPath();
   context.font = "20px Arial";
@@ -85,9 +85,6 @@ const balls = [
         play = !play;
       }
     })
-
-    resizeCanvas();
-
     
     loop();
 
@@ -200,7 +197,7 @@ const balls = [
           let cos = ball.posX / distance;
           let sin = ball.posY / distance;
   
-          let forceX = ball.mass * gravitationalForce(ball.mass, 2000, distance) *  cos;
+          let forceX = ball.mass * gravitationalForce(ball.mass, 2000, distance) * cos;
           let forceY = ball.mass * gravitationalForce(ball.mass, 2000, distance) * sin;
   
           ball.accelerationX = forceX;
